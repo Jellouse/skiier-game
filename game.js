@@ -726,8 +726,8 @@
       const ctx = this.renderCtx;
       const scale = clamp(this.height / 960, 0.8, 1.35);
       const fontSize = Math.round(22 * scale);
-      const top = Math.round(34 * scale);
       const right = this.width - Math.round(22 * scale);
+      const bottom = this.height - Math.round(20 * scale);
       const current = String(this.score).padStart(5, "0");
       const hi = String(this.highScore).padStart(5, "0");
       const label = `HI ${hi} ${current}`;
@@ -735,8 +735,8 @@
       ctx.fillStyle = "rgba(74, 74, 74, 0.92)";
       ctx.font = `700 ${fontSize}px "Courier New", "Andale Mono", monospace`;
       ctx.textAlign = "right";
-      ctx.textBaseline = "top";
-      ctx.fillText(label, right, top);
+      ctx.textBaseline = "alphabetic";
+      ctx.fillText(label, right, bottom);
       ctx.textAlign = "left";
       ctx.textBaseline = "alphabetic";
     }
