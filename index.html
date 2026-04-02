@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skier Runner</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="skier-game" aria-label="Downhill skiing runner game"></canvas>
+    <script src="./game.js"></script>
+    <script>
+      const canvas = document.getElementById("skier-game");
+      window.downhillGame = window.createSkierGame(canvas);
+    </script>
+  </body>
+</html>
